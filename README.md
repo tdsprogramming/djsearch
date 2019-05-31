@@ -3,7 +3,7 @@
 This is a pluggable app to add a search feature to your Django project.
 
 ## How to Use
-First, you need to include the `djsearch.urls` in your main project `urls.py`.
+1. First, you need to include the `djsearch.urls` in your main project `urls.py`.
 
 ```
 import djsearch
@@ -19,7 +19,7 @@ urlpatterns = [
 This will enable you to use the API for queries structured as
 `localhost:8000/search/?q=myquery`.
 
-You will need to specify in your models that you want searched as an attribute in your model object called `djsearch_fields`.
+2. You will need to specify in your models that you want searched as an attribute in your model object called `djsearch_fields`.
 
 You will then need to define a `djresult_output` which will end up sending the list of the fields you specify in your model.
 
@@ -66,7 +66,7 @@ If you have an entry in your database of "John Smith", you can visit `localhost:
     }
 ```
 
-By default, the link will be defined by your model's `get_absolute_url` method, if defined, unless you define `link` in your `djresult_output`, by doing the following:
+3. By default, the link will be defined by your model's `get_absolute_url` method, if defined, unless you define `link` in your `djresult_output`, by doing the following:
 
 ```python
 djresult_output = {

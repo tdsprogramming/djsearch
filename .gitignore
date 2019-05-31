@@ -1,2 +1,6 @@
 migrations/
 __pycache__/
+dist/
+djsearch.egg-info
+Manifest.in
+setup.py
